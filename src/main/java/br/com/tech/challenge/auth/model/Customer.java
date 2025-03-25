@@ -47,10 +47,6 @@ public class Customer implements UserDetails {
         return List.of();
     }
 
-    public String getPassword() {
-        return password;
-    }
-
     @Override
     public String getUsername() {
         return email;
