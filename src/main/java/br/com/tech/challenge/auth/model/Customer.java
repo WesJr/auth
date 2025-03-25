@@ -2,8 +2,7 @@ package br.com.tech.challenge.auth.model;
 
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,7 +15,10 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
+@Builder
 @Table(name = "customers")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer implements UserDetails {
 
     @Id
