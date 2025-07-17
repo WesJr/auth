@@ -37,7 +37,7 @@ public class SecurityConfiguration {
         http
                 .csrf(AbstractHttpConfigurer::disable) // Desabilita CSRF
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/**")
+                        .requestMatchers("/auth/**", "/swagger-ui/**", "/v3/**")
                         .permitAll()
                         .anyRequest()
                         .authenticated()
